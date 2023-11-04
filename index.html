@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.118.2">
+    <title>AMD Radeon RX 6000 series</title>
+    <script src="../assets/js/color-modes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/heroes/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8;
+        }
+
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
+
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+        }
+
+        h3 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+
+        .main-heading {
+            margin-left: 4rem;
+        }
+
+        a {
+            color: black;
+            margin-left: 20px;
+            font-family: consolas;
+        }
+
+        a:hover {
+            color: grey;
+        }
+
+        .tags {
+            text-align: center;
+        }
+
+        .bg {
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+
+        p {
+            font-size: large;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .text-center h2 {
+            font-family: consolas;
+            font-weight: bolder;
+            font-size: x-large;
+        }
+
+        h4 {
+            font-weight: lighter;
+        }
+
+        .text-start p {
+            font-family: li;
+        }
+
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="heroes.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <img src="images/amd-header-logo.svg" alt="logo" width="80px">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Solutions</a>
+                        </li>
+                       
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Resorces & Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Shop</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-danger" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <div class="main-heading">
+        <h3><b>AMD Radeon™ RX Graphics Cards</b></h3>
+    </div>
+    <br>
+    <img src="images/banner3.jpg" class="img-fluid" alt="banner">
+    <br><br>
+    <div class="tags">
+        <a href=""><b>RDNA™3</b></a>
+        <a href=""><b>GAME</b></a>
+        <a href=""><b>STREAM</b></a>
+        <a href=""><b>ADVANCE</b></a>
+        <a href=""><b>Features</b></a>
+    </div>
+    <br>
+    <div class="bg container-fluid">
+        <br><br>
+        <h2>Game. Stream. Advance.</h2>
+        <p>Built on the groundbreaking AMD RDNA™ 3 architecture, AMD Radeon™ RX 7000 Series graphics deliver
+            next-generation performance, visuals, <br> and efficiency.</p>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <img src="images/console.png" alt="" width="200px">
+                    <h2>Game</h2>
+                </div>
+                <div class="col">
+                    <img src="images/tv.png" alt="" width="200px">
+                    <h2>Stream</h2>
+                </div>
+                <div class="col">
+                    <img src="images/card.png" alt="" width="200px">
+                    <h2>Advance</h2>
+                </div>
+            </div>
+            <br><br>
+            <button type="button" class="btn btn-outline-secondary"><b>LEARN MORE ABOUT RDNA 3</b></button>
+            <br><br>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/IUITZVqaXew?si=0oGPONCPvp_n3JM0"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="col text-start">
+                        <h4>Introducing the AMD Radeon™ RX 7700 XT and 7800 XT Graphics Cards</h4>
+                        <br>
+                        <p>The AMD Radeon™ RX 7700 XT graphics card is an ultra-fast, future-ready 12GB 1440p graphics
+                            card.</p>
+                        <p>The AMD Radeon™ RX 7800 XT graphics card is the ultimate 1440p card, with 16GB to jump into
+                            4K, featuring next generation technologies.</p>
+                    </div>
+
+                </div>
+                <br>
+                <hr>
+
+
+            </div>
+<br><br>
+<div class="row">
+    <div class="col">
+            <div class="text-align-center">
+                <h1>Breakthrough Performance</h1><br>
+                <p>Break through new levels of performance with up to 24 GB of GDDR6 memory and blazing fast clock
+                    speeds for an incredible gaming experience. Radeon™ RX 7000 Series graphics feature advanced AMD
+                    RDNA™ 3 compute units, with second-generation raytracing accelerators and new AI accelerators to
+                    deliver remarkable performance while maximizing graphical fidelity.</p>
+            </div>
+            </div>
+            <div>
+                <img src="images/banner.jpg" alt="GPU">
+            </div>
+</div>
+<br><br><hr>
+<br>
+            <img src="images/banner4.jpg" class="img-fluid" alt="banner">
+<br><br><br>
+   <img src="images/SmurfCatImage.png" alt="easteregg" width="50px">
+</body>
+
+<footer><br><br>
+    &copy; 2023 Humud Kashif. All rights reserved.
+    <br><br>
+</footer>
+
+</html>
